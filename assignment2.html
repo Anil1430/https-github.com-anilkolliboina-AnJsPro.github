@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment for a Javascript Developer</title>
+</head>
+<body>
+
+<script>
+
+  var  data = {  name: "Rajesh", address : { locality : { street : "2nd main domlur"}}};
+
+    function getObjPath(obj, prop){
+    prop = prop.split('.');
+    for (var i = 0; i < prop.length; i++) {
+        if(typeof obj[prop[i]] == 'undefined')
+            return "the attribute is not available";
+        obj = obj[prop[i]];
+    }
+    return obj;
+   }
+
+var valuereturned= getObjPath(data,'address.locality.street');
+alert(valuereturned);
+
+
+
+</script>
+
+</body>
+</html>
